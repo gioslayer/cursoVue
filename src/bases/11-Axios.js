@@ -9,17 +9,18 @@ const giphyApi = axios.create({
     }
 })
 
+export default giphyApi
 
-giphyApi.get('/random')
-    .then(resp => {
+//giphyApi.get('/random')
+//    .then(resp => {
+//
+//        const { data } = resp.data
+//        const { url } = data.images.original
 
-        const { data } = resp.data
-        const { url } = data.images.original
-
-        const img = document.createElement('img')
-        img.src = url
-        document.body.append(img)
-        console.log(url)
+//        const img = document.createElement('img')
+//        img.src = url
+//        document.body.append(img)
+//        console.log(url)
         /*Esta es una solución valida pero quizas pueda ser un tanto dificil de manejar
         al querer entrar a una nueva propiedad, de nuevo tendriamos que usar
         resp.data.data.images.original.height
@@ -30,4 +31,4 @@ giphyApi.get('/random')
         console.log(resp.data.data.images.original.url)
 
         */
-    })
+//    })
